@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio — Nguyen Van Thanh (Vision Engineer)</title>
+  <style>
+    :root{
+      --bg:#f7fafc; --card:#ffffff; --muted:#6b7280; --accent:#1e40af;
+      --radius:12px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,#f8fafc,#eef2ff 60%);color:#0f172a;line-height:1.45}
+    .wrap{max-width:980px;margin:36px auto;padding:20px}
+    header{display:flex;gap:18px;align-items:center}
+    .avatar{
+      width:100px;height:100px;border-radius:12px;background:linear-gradient(135deg,#dbeafe,#c7d2fe);
+      display:flex;align-items:center;justify-content:center;font-weight:700;color:#0f172a;font-size:20px;box-shadow:0 8px 18px rgba(2,6,23,0.06);
+      overflow:hidden;
+    }
+    h1{margin:0;font-size:26px}
+    .sub{color:var(--muted);margin-top:6px;font-size:14px}
+    .top-actions{margin-left:auto;display:flex;gap:8px}
+    .btn{padding:8px 12px;border-radius:10px;border:0;font-weight:600;cursor:pointer}
+    .btn-primary{background:var(--accent);color:white}
+    .btn-ghost{background:transparent;border:1px solid rgba(15,23,42,0.06)}
+    main{margin-top:18px;display:grid;grid-template-columns:2fr 1fr;gap:18px}
+    .card{background:var(--card);border-radius:var(--radius);padding:18px;box-shadow:0 6px 22px rgba(15,23,42,0.06)}
+    section h2{margin-top:0}
+    .projects{display:flex;flex-direction:column;gap:14px}
+    .proj{border-radius:10px;padding:12px;border:1px solid rgba(15,23,42,0.04)}
+    .small{font-size:13px;color:var(--muted)}
+    .tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+    .tag{font-size:12px;padding:6px 8px;border-radius:999px;background:#f1f5f9;color:#0f172a}
+    footer{text-align:center;color:var(--muted);margin-top:22px;font-size:13px}
+    a{color:var(--accent);text-decoration:none}
+    pre.star{background:#f8fafc;padding:10px;border-radius:8px;white-space:pre-wrap;font-family:inherit}
+    @media (max-width:860px){
+      main{grid-template-columns:1fr}
+      .top-actions{margin-left:0;margin-top:10px}
+      header{flex-direction:column;align-items:flex-start;gap:12px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="avatar">
+        <img src="anhthe.jpg" alt="Nguyen Van Thanh" style="width:100%;height:100%;object-fit:cover;border-radius:12px;" />
+      </div>
+      <div>
+        <h1>Nguyen Van Thanh</h1>
+        <div class="sub">Vision Engineer — Computer Vision • Embedded Systems • Real-time</div>
+        <div class="sub" style="margin-top:8px">
+          <span style="margin-right:12px">📍 Hanoi, Vietnam</span>
+          <span style="margin-right:12px">✉️ nguyenvanthanh221101@gmail.com</span>
+        </div>
+      </div>
+
+      <div class="top-actions">
+        <a href="CV_NguyenVanThanh_KohYoung.pdf" class="btn btn-ghost" download>📄 Download CV</a>
+        <button class="btn btn-primary" onclick="scrollToSection('projects')">📁 See projects</button>
+      </div>
+    </header>
+
+    <main>
+      <!-- left column -->
+      <div>
+        <section class="card">
+          <h2>About</h2>
+          <p class="small">
+            I am a Vision Engineer experienced in image processing, camera calibration and embedded deployment. I deliver robust, efficient pipelines for real-time measurement, inspection and classification tasks. I prioritize reproducibility, performance and practical evaluation.
+          </p>
+          <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
+            <div class="tag">C++</div><div class="tag">Python</div><div class="tag">OpenCV</div><div class="tag">PyTorch</div><div class="tag">Camera calibration</div>
+          </div>
+        </section>
+
+        <section id="projects" class="card" style="margin-top:14px">
+          <h2>Selected projects</h2>
+          <div class="projects">
+
+            <div class="proj">
+                <strong>
+                  <a href="https://github.com/nguyenvanthanh221101/mechanical-details-classification-resnet50" target="_blank" style="display:inline-flex;align-items:center;gap:4px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" style="vertical-align:middle" viewBox="0 0 16 16" fill="currentColor">
+                      <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.65 7.65 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                    </svg>
+                    Non-contact Object Size Measurement
+                  </a>
+                </strong></svg>
+              <div class="small" style="margin-top:6px">Role: Vision developer — Hardware + software pipeline for dimensional measurement</div>
+              <pre class="star">
+Situation:
+  Production team required a contactless way to measure small manufactured parts on a fast conveyor line; existing gauges slowed throughput and caused wear.
+
+Task:
+  Design and implement a robust vision pipeline that estimates real-world dimensions with ±1 mm accuracy at 30+ objects/min, tolerant to lighting changes.
+
+Action:
+  • Performed camera calibration and perspective correction using a multi-target calibration board.
+  • Developed preprocessing (adaptive histogram equalization, denoising) and sub-pixel edge detection in C++/OpenCV.
+  • Implemented a calibration-based scale estimator and multi-view checks to reject occluded samples.
+  • Optimized code for real-time operation via multi-threading and ROI-based processing.
+
+Result:
+  • Achieved median error 0.8 mm (target ±1 mm) on validation dataset.
+  • Processed 45 objects/min on target embedded PC, surpassing throughput goal.
+  • Awarded 1st Prize — University Research; solution adopted for pilot at partner factory.
+              </pre>
+            </div>
+
+            <div class="proj">
+              <strong>Ripe Tomato Recognition</strong>
+              <div class="small" style="margin-top:6px">Role: Dataset lead & model developer — agricultural sorting application</div>
+              <pre class="star">
+Situation:
+  Small-scale farms needed an automated way to sort ripe tomatoes to reduce manual labor and post-harvest loss.
+
+Task:
+  Build a lightweight classifier capable of identifying ripe vs. unripe tomatoes on RGB images captured under variable orchard lighting, deployable on edge hardware.
+
+Action:
+  • Collected and annotated a dataset of 5,200 images with augmentation to reflect lighting and occlusion.
+  • Evaluated classical color-space segmentation + hand-crafted features and small CNNs to balance accuracy and compute.
+  • Selected a compact CNN and applied quantization-aware training; integrated simple tracking to smooth predictions across frames.
+
+Result:
+  • Classification accuracy: 94.2% on a held-out field test set; precision for ripe class: 92.8%.
+  • Model runs at ~18 FPS on target ARM board after quantization.
+  • Recognized with 2nd Prize — University Research for practical impact and dataset contribution.
+              </pre>
+            </div>
+
+            <div class="proj">
+              <strong>Defect Detection with Faster R-CNN</strong>
+              <div class="small" style="margin-top:6px">Role: Model engineer — industrial visual inspection</div>
+              <pre class="star">
+Situation:
+  QA line required automated detection of surface defects on metal parts; manual inspection was inconsistent and slow.
+
+Task:
+  Build an object-detection pipeline to locate and classify defect types with high recall while keeping false positives manageable.
+
+Action:
+  • Curated and balanced a defect dataset with bounding-box labels; applied focused augmentation for minority defect types.
+  • Fine-tuned a Faster R-CNN with ResNet-50 backbone using transfer learning; experimented with focal loss and ROI sampling to improve small-defect recall.
+  • Implemented post-processing filters and integrated the pipeline into the inspection line with a lightweight inference server.
+
+Result:
+  • Mean Average Precision (mAP) increased from baseline 0.57 to 0.78 after tuning.
+  • Recall for critical defect classes reached 0.91, reducing escape-rate in production tests by 62%.
+  • Work published as a conference paper (2023) and used as part of ongoing collaboration with a manufacturing partner.
+              </pre>
+            </div>
+
+          </div>
+        </section>
+
+        <section class="card" style="margin-top:14px">
+          <h2>Publications </h2>
+          <ul class="small" style="margin-top:8px">
+            <li>
+              <a href="https://ieeexplore.ieee.org/document/10616990/" target="_blank" title="Open paper">
+                📄
+              </a>
+              Nguyen, N.V. (2024) 'Developed a Tomato-Condition Classification System using Image Processing and YOLO Technology',
+              <em>International Conference on Integrated Circuits, Design, and Verification (ICDV)</em>
+            </li>
+            <li>
+              <a href="https://www.vjol.info.vn/index.php/saodo/article/view/114757" target="_blank" title="Open paper">
+                📄
+              </a>
+              Do Van Dinh, Pham Van Nam, Nguyen Van Thanh, Nguyen Huy Nam, Nguyen Van Dung (2023) 'Application of Image Processing and Faster R-CNN Model in Mechanical Product Defect Diagnosis Systems', <em>Saodo Journal</em>.
+            </li>
+            <li>
+              <a href="https://vjol.info.vn/index.php/dhcnhn/article/view/104966" target="_blank" title="Open paper">
+                📄
+              </a>
+              Nguyen Van Thanh & Pham Van Nam (2024). 'Application of image processing and ResNet‑50 model in diagnosing defects in mechanical product details', <em>Proceedings of the First National Conference on Energy, Electronics, and Automation (EEA 2024)</em>.
+            </li>
+            
+          </ul>
+        </section>
+      </div>
+
+      <!-- right column -->
+      <aside>
+        <div class="card">
+          <h3>Experience</h3>
+          <div class="small" style="margin-top:10px">
+            <strong>LG Electronics R&amp;D Vietnam</strong><br /><span style="font-size:13px;color:var(--muted)">Software Engineer — Aug 2023 – Present</span>
+          </div>
+          <div class="small" style="margin-top:8px">
+            <strong>Gameloft Vietnam</strong><br /><span style="font-size:13px;color:var(--muted)">Game Developer Intern — Feb 2023 – Mar 2023</span>
+          </div>
+          <div class="small" style="margin-top:8px">
+            <strong>Samsung Vietnam Mobile R&amp;D</strong><br /><span style="font-size:13px;color:var(--muted)">Intern — Jul 2022 – Aug 2022</span>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h3>Achievements & Awards</h3>
+          <ul class="small" style="margin-top:8px">
+            <li>1st Prize — University Research (Non-contact Measurement)</li>
+            <li>2nd Prize — University Research (Tomato recognition)</li>
+            <li>Conference paper — Faster R-CNN defect detection (2023)</li>
+            <li>LG Track Scholarship</li>
+          </ul>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h3>Skills & Tools</h3>
+          <div class="small" style="margin-top:8px">
+            C++, Python, OpenCV, PyTorch, TensorFlow, Camera calibration, Multithreading, gtest, Jenkins CI, Git
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h3>Contact</h3>
+          <div class="small" style="margin-top:8px">
+            Email: <a href="mailto:nguyenvanthanh221101@gmail.com">nguyenvanthanh221101@gmail.com</a><br />
+            Location: Hanoi, Vietnam<br />
+            GitHub: <a href="https://github.com/nguyenvanthanh221101?tab=repositories&q=&type=public&language=&sort=" target="_blank">github.com/nguyenvanthanh</a><br />
+            CV: <a href="CV_NguyenVanThanh_KohYoung.pdf" download>Download PDF</a>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      © <span id="year"></span> Nguyen Van Thanh — Vision Engineer
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function scrollToSection(id){ document.getElementById(id).scrollIntoView({behavior:'smooth',block:'start'}); }
+  </script>
+</body>
+</html>
